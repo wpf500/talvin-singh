@@ -1,0 +1,39 @@
+nav {
+    position: fixed;
+    top: @body-padding;
+    left: @body-padding;
+    right: @body-padding;
+
+    font-size: 10pt;
+    font-weight: @solomon-bold;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: table;
+    border-spacing: 0;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    display: table-cell;
+}
+
+.nav-social {
+    text-align: left;
+    &:before {
+        content: "\25B6";
+        padding-right: 5px;
+    }
+}
+
+.nav-mgmt {
+    text-align: right;
+    &:after {
+        content: "\25BC";
+    }
+}
