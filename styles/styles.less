@@ -1,4 +1,4 @@
-@import "fonts.less";
+@import "core/fonts.less";
 
 html {
     background: url('../images/bg.jpg') no-repeat center center fixed;
@@ -20,52 +20,4 @@ body {
     }
 }
 
-header {
-    display: inline-block;
-    vertical-align: middle;
-    min-width: 280px;
-}
-
-.header-name {
-    margin: 0;
-    padding: 10px 0 0;
-
-    font-weight: @solomon-light;
-    font-size: 20pt;
-    letter-spacing: 6pt;
-    text-transform: uppercase;
-    border-top: 1px solid black;
-    text-align: center;
-}
-
-.header-sub {
-    padding: 0 5px;
-
-    font-weight: @solomon-bold;
-    font-size: 9pt;
-    text-transform: uppercase;
-    text-align: center;
-
-    overflow: hidden;
-
-    &:before,
-    &:after {
-        background-color: #000;
-        content: "";
-        display: inline-block;
-        height: 1px;
-        position: relative;
-        vertical-align: middle;
-        width: 50%;
-    }
-
-    &:before {
-        right: 0.5em;
-        margin-left: -50%;
-    }
-
-    &:after {
-        left: 0.5em;
-        margin-right: -50%;
-    }
-}
+@import "components/header.less";
