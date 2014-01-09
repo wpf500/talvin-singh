@@ -1,24 +1,26 @@
 header {
     display: inline-block;
     vertical-align: middle;
-    min-width: 280px;
+
+    padding-top: 10px;
+    border-top: 1px solid @fg;
 }
 
 .header-name {
+    @letter-spacing: 6pt;
+
     margin: 0;
-    padding: 10px 0 0;
+    padding-left: @letter-spacing;
 
     font-weight: @solomon-light;
     font-size: 20pt;
-    letter-spacing: 6pt;
+    letter-spacing: @letter-spacing;
     text-transform: uppercase;
-    border-top: 1px solid @fg;
     text-align: center;
 }
 
 .header-sub {
     margin: 5px 0 0;
-    padding: 0 5px;
 
     font-weight: @solomon-bold;
     font-size: 9pt;
