@@ -12,11 +12,12 @@ header {
     font-size: 20pt;
     letter-spacing: 6pt;
     text-transform: uppercase;
-    border-top: 1px solid black;
+    border-top: 1px solid @fg;
     text-align: center;
 }
 
 .header-sub {
+    margin: 5px 0 0;
     padding: 0 5px;
 
     font-weight: @solomon-bold;
@@ -28,7 +29,7 @@ header {
 
     &:before,
     &:after {
-        background-color: #000;
+        background-color: @fg;
         content: "";
         display: inline-block;
         height: 1px;
