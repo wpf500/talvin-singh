@@ -48,6 +48,24 @@
             </a>
         </section>
     </main>
+    <footer>
+        <div class="footer">
+            <section class="footer-content">
+                Enter your email address for an exclusive
+                <b>free soundcloud track</b>:
+                <form class="footer-form">
+                    <div class="footer-form-email">
+                        <input class="footer-form-email-input" type="text"
+                            name="email" placeholder="Enter email address" />
+                    </div>
+                    <div class="footer-form-button">
+                        <button class="footer-form-submit-input" type="submit">&#9654;</button>
+                    </div>
+                </form>
+            </section>
+            <a class="footer-link" href="#">Exclusive soundcloud track</a>
+        </div>
+    </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $('.nav-item-link').click(function () {
@@ -61,6 +79,10 @@
                     .parent().addClass('is-open');
                 $($this.attr('href')).addClass('is-open');
             }
+        });
+
+        $('.footer-link').click(function () {
+            $(this).parent().toggleClass('is-open');
         });
     </script>
 </body>

@@ -1,0 +1,97 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer {
+    margin: 0 auto;
+
+    width: 90%;
+    max-width: 500px;
+
+    background-color: @fg;
+
+    font-size: 12pt;
+    text-align: left;
+    color: white;
+}
+
+.footer-link {
+    display: block;
+
+    position: relative;
+    padding: 0 20px;
+
+    line-height: 65px;
+
+    font-weight: @solomon-bold;
+    text-transform: uppercase;
+
+    &,
+    &:hover,
+    &:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    &:after {
+        content: "\25BC";
+        position: absolute;
+        right: 20px;
+    }
+
+    .footer.is-open > &:after {
+        content: "\25B2";
+    }
+}
+
+.footer-content {
+    padding: 15px 15px 0;
+
+    display: none;
+    .footer.is-open > & {
+        display: block;
+    }
+}
+
+.footer-form {
+    display: table;
+    border-spacing: 3px;
+    width: 100%;
+
+    margin: 15px 0 0;
+
+    background-color: #909090;
+}
+
+.footer-form-email {
+    display: table-cell;
+}
+
+.footer-form-submit {
+    display: table-cell;
+    width: 30px;
+}
+
+.footer-form-email-input,
+.footer-form-submit-input {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    height: 40px;
+
+    font-size: inherit;
+}
+
+.footer-form-email-input {
+    font-weight: @solomon-bold;
+    text-indent: 10px;
+}
+
+.footer-form-submit-input {
+    background: none;
+    cursor: pointer;
+    color: white;
+}
