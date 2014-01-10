@@ -21,19 +21,52 @@ nav {
 
 .nav-item {
     display: table-cell;
+
+    &:before {
+        display: inline-block;
+        width: 15px;
+    }
 }
 
 .nav-social {
     text-align: left;
+
     &:before {
         content: "\25B6";
-        padding-right: 5px;
+    }
+
+    &.is-open:before {
+        content: "\25B2";
     }
 }
 
 .nav-mgmt {
     text-align: right;
+
     &:after {
         content: "\25BC";
+    }
+
+    &.is-open:after {
+        content: "\25B2";
+    }
+}
+
+.nav-item-link {
+    &,
+    &:hover,
+    &:visited {
+        color: @fg;
+        text-decoration: underline;
+    }
+
+    &.is-open {
+        visibility: hidden;
+        letter-spacing: -999px;
+        &:before {
+            visibility: visible;
+            content: "CLOSE";
+            letter-spacing: normal;
+        }
     }
 }

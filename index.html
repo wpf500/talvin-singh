@@ -10,18 +10,58 @@
 <body>
     <nav>
         <ul class="nav">
-            <li class="nav-item nav-social"><a href="#">Social</a></li>
+            <li class="nav-item nav-social">
+                <a class="nav-item-link" href="#social">Social</a>
+            </li>
             <li class="nav-item nav-mgmt">
-                <a href="#">Management</a> |
-                <a href="#">Booking</a>
+                <a class="nav-item-link" href="#mgmt">Management</a> |
+                <a class="nav-item-link" href="#booking">Booking</a>
             </li>
         </ul>
     </nav>
+    <main>
+        <section class="main-content" id="social">
+            social
+        </section>
+        <section class="main-content" id="mgmt">
+            <h2 class="main-title">Alex Martin - AM Music</h2>
+            Crown Talent &amp; Media Group<br />
+            91 Peterborough Road, London, SW6 3BU<br />
+            Tel: +44 (0)20 7371 5444 | Mob: +44 (0) 7719 140848<br />
+            <a href="mailto:alex.martin@crowntalentgroup.com">
+                alex.martin@crowntalentgroup.com
+            </a>
+        </section>
+        <section class="main-content" id="booking">
+            <h2 class="main-title">Elastic Arts Agency Ltd</h2>
+            Targetspace: Room 104, 1st Floor<br />
+            70 St Mary Axe, London, EC3A 8BE<br />
+            Tel: +44 (0)20 7336 8340 | Fax: +44 (0)20 7608 1471<br />
+            <a href="mailto:info@elasticartists.net">
+                info@elasticartists.net
+            </a>
+        </section>
+    </main>
     <header>
         <hgroup>
             <h1 class="header-name">Talvin Singh</h1>
             <h2 class="header-sub">Where there is silence, there is sound</h2>
         </hgroup>
     </header>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $('.nav-item-link').click(function () {
+            var $this = $(this);
+            var open = $this.hasClass('is-open');
+
+            $('.is-open').removeClass('is-open');
+
+            if (!open) {
+                $this.addClass('is-open')
+                    .parent().addClass('is-open');
+                $($this.attr('href')).addClass('is-open');
+            }
+        });
+    </script>
 </body>
 </html>

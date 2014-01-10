@@ -12,6 +12,7 @@ body {
     min-width: 280px;
 
     font-family: "solomon", arial, san-serif;
+    font-size: 9pt;
     color: @fg;
     text-align: center;
 
@@ -23,10 +24,15 @@ body {
     }
 }
 
-a, a:hover, :visited {
-    color: @fg;
-    text-decoration: underline;
+a {
+    &,
+    &:hover,
+    &:visited {
+        color: #825038;
+        text-decoration: underline;
+    }
 }
 
 @import "components/header.less";
 @import "components/nav.less";
+@import "components/main.less";

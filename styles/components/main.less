@@ -1,0 +1,22 @@
+main {
+    position: fixed;
+    top: (@body-padding + 40px);
+    left: @body-padding;
+    right: @body-padding;
+}
+
+.main-content {
+    line-height: 15pt;
+
+    display: none;
+    &.is-open {
+        display: block;
+    }
+}
+
+.main-title {
+    margin: 0;
+
+    font-size: 9pt;
+    font-weight: @solomon-bold;
+}
