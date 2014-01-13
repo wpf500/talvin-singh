@@ -87,10 +87,19 @@ nav {
 }
 
 .nav-follow-link {
-    font-weight: normal;
-    text-decoration: none;
-
     padding-left: 10px;
+
+    &,
+    &:hover,
+    &:visited {
+        color: @fg;
+        text-decoration: none;
+    }
+
+    font-weight: normal;
+    &:hover {
+        font-weight: @solomon-bold;
+    }
 
     &:after {
         content: " \2197";
