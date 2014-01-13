@@ -27,16 +27,9 @@ nav {
     display: table-cell;
 
     &:before {
+        content: "\25BC";
         display: inline-block;
         width: 15px;
-    }
-}
-
-.nav-social {
-    text-align: left;
-
-    &:before {
-        content: "\25B6";
     }
 
     &.is-open:before {
@@ -44,15 +37,15 @@ nav {
     }
 }
 
+.nav-social {
+    text-align: left;
+}
+
 .nav-mgmt {
     text-align: right;
 
-    &:after {
-        content: "\25BC";
-    }
-
-    &.is-open:after {
-        content: "\25B2";
+    &:before {
+        float: right;
     }
 }
 
