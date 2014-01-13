@@ -1,3 +1,5 @@
+@social-break: 720px;
+
 nav {
     position: fixed;
     top: 0;
@@ -6,11 +8,13 @@ nav {
 
     padding: @body-padding;
 
-    border-bottom: 1px solid @fg;
-
     font-size: 10pt;
     font-weight: @solomon-bold;
     text-transform: uppercase;
+
+    @media (min-width: @social-break) {
+        border-bottom: 1px solid @fg;
+    }
 }
 
 .nav {
@@ -39,6 +43,20 @@ nav {
 
 .nav-social {
     text-align: left;
+
+    @media (min-width: @social-break) {
+        display: none;
+    }
+}
+
+.nav-follow {
+    text-align: left;
+    text-transform: uppercase;
+
+    display: none;
+    @media (min-width: @social-break) {
+        display: table-cell;
+    }
 }
 
 .nav-mgmt {
@@ -65,5 +83,16 @@ nav {
             content: "CLOSE";
             letter-spacing: normal;
         }
+    }
+}
+
+.nav-follow-link {
+    font-weight: normal;
+    text-decoration: none;
+
+    padding-left: 10px;
+
+    &:after {
+        content: " \2197";
     }
 }
