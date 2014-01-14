@@ -4,6 +4,19 @@ header {
 
     padding-top: 10px;
     border-top: 1px solid @fg;
+
+    text-transform: uppercase;
+    font-size: 22pt;
+
+    @media (min-width: 500px) {
+        font-size: 40pt;
+    }
+    @media (min-width: 720px) {
+        font-size: 55pt;
+    }
+    @media (min-width: 1400px) {
+        font-size: 80pt;
+    }
 }
 
 .header-name {
@@ -15,20 +28,13 @@ header {
     margin: 0;
 
     font-weight: @solomon-light;
-    font-size: 22pt;
+    font-size: 1em;
     .letter-spacing(6pt);
-    text-transform: uppercase;
-    text-align: center;
 
-    @media (min-width: 500px) {
-        font-size: 40pt;
-    }
     @media (min-width: 720px) {
-        font-size: 55pt;
         .letter-spacing(12pt);
     }
     @media (min-width: 1400px) {
-        font-size: 80pt;
         .letter-spacing(18pt);
     }
 }
@@ -37,9 +43,10 @@ header {
     margin: 5px 0 0;
 
     font-weight: @solomon-bold;
-    font-size: 9pt;
-    text-transform: uppercase;
-    text-align: center;
+    font-size: 0.4em;
+    @media (min-width: 500px) {
+        font-size: 0.2em;
+    }
 
     overflow: hidden;
 
