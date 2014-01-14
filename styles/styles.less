@@ -5,6 +5,17 @@ html {
     background: url('../images/bg.jpg') no-repeat right top fixed;
     background-size: cover;
 
+    font-family: "solomon", arial, san-serif;
+    font-size: 9pt;
+
+    @media (min-width: 450px) {
+        font-size: 10pt;
+    }
+
+    @media (min-width: 720px) {
+        font-size: 11pt;
+    }
+
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -13,8 +24,6 @@ body {
     margin: 0;
     min-width: 280px;
 
-    font-family: "solomon", arial, san-serif;
-    font-size: 9pt;
     color: @fg;
     text-align: center;
 
