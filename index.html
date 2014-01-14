@@ -88,18 +88,27 @@
     </header>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
-        $('.nav-item-link').click(function () {
-            var $this = $(this);
-            var open = $this.hasClass('is-open');
+        (function () {
+            var $active;
 
-            $('.is-open').removeClass('is-open');
+            $('.nav-item-link').click(function () {
+                var $this = $(this);
+                var text = $this.text();
 
-            if (!open) {
-                $this.addClass('is-open')
-                    .parent().addClass('is-open');
-                $($this.attr('href')).addClass('is-open');
-            }
-        });
+                $('.nav-item.is-open, .main-content.is-open').removeClass('is-open');
+
+                if ($active) {
+                    $active.text($active.data('default'));
+                }
+                $active = $this;
+
+                if (text !== 'CLOSE') {
+                    $this.data('default', text).text('CLOSE')
+                        .closest('.nav-item').addClass('is-open');
+                    $($this.attr('href')).addClass('is-open');
+                }
+            });
+        })();
 
         $('.footer-link').click(function () {
             $(this).closest('.footer').toggleClass('is-open');
