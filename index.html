@@ -92,7 +92,7 @@
                     </div>
                 </form>
             </section>
-            <a class="footer-link" href="#">Exclusive soundcloud track</a>
+            <a class="footer-link" href="#track">Exclusive soundcloud track</a>
         </div>
     </footer>
     <!-- chrome bug means header has to go at the bottom -->
@@ -132,6 +132,10 @@
                     $('.footer-form-email-input').focus();
                 }
             });
+
+            if (window.location.hash) {
+                $('a[href=' + window.location.hash + ']').click();
+            }
         })();
     </script>
 </body>
