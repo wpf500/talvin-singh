@@ -103,6 +103,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         (function () {
+            var $footer = $('.footer');
             var $active;
 
             $('.nav-item-link').click(function () {
@@ -122,11 +123,14 @@
                     $($this.attr('href')).addClass('is-open');
                 }
             });
-        })();
 
-        $('.footer-link').click(function () {
-            $(this).closest('.footer').toggleClass('is-active');
-        });
+            $('.footer-link').click(function () {
+                $footer.toggleClass('is-active');
+                if ($footer.hasClass('is-active')) {
+                    $('.footer-form-email-input').focus();
+                }
+            });
+        })();
     </script>
 </body>
 </html>
