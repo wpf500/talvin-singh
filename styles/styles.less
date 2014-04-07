@@ -2,6 +2,8 @@
 @import "core/fonts.less";
 
 html {
+    height: 100%;
+
     background: url('../images/bg.jpg') no-repeat right top fixed;
     background-size: cover;
 
@@ -22,13 +24,15 @@ html {
 
 body {
     margin: 0;
+
+    height: 100%;
     min-width: 280px;
 
     color: @fg;
     text-align: center;
 
     &:after {
-        content: " ";
+        content: "";
         display: inline-block;
         vertical-align: middle;
         height: 100%;
