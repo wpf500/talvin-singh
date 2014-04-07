@@ -109,7 +109,7 @@
                 var $this = $(this);
                 var text = $this.text();
 
-                $('.nav-item.is-open, .main-content.is-open').removeClass('is-open');
+                $('.is-open').removeClass('is-open');
 
                 if ($active) {
                     $active.text($active.data('default'));
@@ -125,7 +125,7 @@
         })();
 
         $('.footer-link').click(function () {
-            $(this).closest('.footer').toggleClass('is-open');
+            $(this).closest('.footer').toggleClass('is-active');
         });
     </script>
 </body>
