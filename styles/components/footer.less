@@ -1,3 +1,5 @@
+@footer-height: 46px;
+
 footer {
     z-index: 1; // above header
     position: fixed;
@@ -63,8 +65,9 @@ footer {
     display: table;
     border-spacing: 3px;
     width: 100%;
+    height: @footer-height;
 
-    background-color: #909090;
+    background-color: lighten(@fg, 40%);
 }
 
 .footer-form-email {
@@ -81,7 +84,7 @@ footer {
     margin: 0;
     border: 0;
     width: 100%;
-    height: 40px;
+    height: 100%;
 
     font-size: inherit;
 }
