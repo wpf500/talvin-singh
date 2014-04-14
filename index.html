@@ -152,8 +152,14 @@
             });
 
             $('#ml-form').submit(function (evt) {
-                $('#ml-done').addClass('is-active');
-                $('#ml-form').removeClass('is-active');
+                $.post('mailinglist.php', {
+                    'email': $('.footer-form-email-input').val()
+                }, function () {
+                    window.localStorage['mailing_list'] = true;
+                    $('#ml-done').addClass('is-active');
+                    $('#ml-form').removeClass('is-active');
+                });
+
                 evt.preventDefault();
             });
 
