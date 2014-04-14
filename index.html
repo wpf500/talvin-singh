@@ -85,7 +85,7 @@
     </main>
     <footer>
         <div class="footer">
-            <section class="footer-content">
+            <section id="ml-form" class="footer-content">
                 <p>
                     Enter your email address for an exclusive
                     <b>free soundcloud track</b>:
@@ -100,6 +100,13 @@
                     </div>
                 </form>
             </section>
+            <section id="ml-done" class="footer-content">
+                <p><b>That's it, thank you!</b></p>
+                <a class="footer-done" href="https://soundcloud.com/talvin-singh/free/s-4drhC">
+                    <img class="footer-done-logo" src="images/soundcloud.svg" />
+                    Listen on Soundcloud Now
+                </a>
+            </section>
             <a class="footer-link" href="#track">Exclusive soundcloud track</a>
         </div>
     </footer>
@@ -113,7 +120,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         (function () {
-            var $footer = $('.footer');
             var $active;
 
             $('.nav-item-link').click(function () {
@@ -135,10 +141,20 @@
             });
 
             $('.footer-link').click(function () {
-                $footer.toggleClass('is-active');
-                if ($footer.hasClass('is-active')) {
+                $('.footer').toggleClass('is-active');
+
+                if (window.localStorage['mailing_list']) {
+                    $('#ml-done').toggleClass('is-active');
+                } else {
+                    $('#ml-form').toggleClass('is-active');
                     $('.footer-form-email-input').focus();
                 }
+            });
+
+            $('#ml-form').submit(function (evt) {
+                $('#ml-done').addClass('is-active');
+                $('#ml-form').removeClass('is-active');
+                evt.preventDefault();
             });
 
             if (window.location.hash) {

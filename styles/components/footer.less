@@ -56,7 +56,7 @@ footer {
     padding: 15px 15px 0;
 
     display: none;
-    .footer.is-active > & {
+    &.is-active {
         display: block;
     }
 }
@@ -98,4 +98,38 @@ footer {
     background: none;
     cursor: pointer;
     color: white;
+}
+
+.footer-done {
+    display: block;
+    background-color: white;
+
+    height: @footer-height;
+    line-height: @footer-height;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: @solomon-bold;
+
+    &,
+    &:hover,
+    &:visited {
+        color: @fg;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: #e8e8e8;
+    }
+}
+
+.footer-done-logo {
+    vertical-align: middle;
+    height: 75%;
+    margin-top: -3px;
+
+    display: none;
+    @media (min-width: 360px) {
+        display: inline-block;
+    }
 }
